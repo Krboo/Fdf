@@ -6,13 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:46 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/05 21:09:58 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/05 21:24:29 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-void				mlx_pxl_wputb(t_env *e, int x, int y, unsigned int place)
+void	mlx_pxl_wputb(t_env *e, int x, int y, unsigned int place)
 {
 	place = y * (WIDTH * 4);
 	place += x * 4;
@@ -33,7 +33,7 @@ void				mlx_pxl_wputb(t_env *e, int x, int y, unsigned int place)
 	}
 }
 
-void				mlx_pixel_wput(t_env *e, int x, int y)
+void	mlx_pixel_wput(t_env *e, int x, int y)
 {
 	unsigned int	place;
 

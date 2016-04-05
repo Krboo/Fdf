@@ -6,12 +6,11 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:24 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/05 20:54:54 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/05 21:26:58 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
-#include <stdio.h>
 
 int		loop_hook(t_env *e)
 {
@@ -56,7 +55,6 @@ void	key_hook2(int keycode, t_env *e)
 
 int		mouse_hook(int button, int x, int y, t_env *c)
 {
-	printf("mouse: %d (%d:%d)\n", button, x, y);
 	if (button == 1)
 	{
 		c->zoom += 1;
@@ -78,7 +76,6 @@ int		mouse_hook(int button, int x, int y, t_env *c)
 
 int		key_hook(int keycode, t_env *e)
 {
-	ft_putnbr(keycode);
 	if (keycode == 53)
 		exit(0);
 	if (keycode == 78)

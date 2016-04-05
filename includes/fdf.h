@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:53:05 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/05 19:54:01 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/05 22:30:16 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 # include <fcntl.h>
 # include "../minilibx_macos/mlx.h"
 # include "../libft/includes/libft.h"
-# define WIDTH 1920
-# define HEIGHT 1080
-# define XCENTER 960
-# define YCENTER 540
+# define WIDTH 960
+# define HEIGHT 540
+# define XCENTER 480
+# define YCENTER 270
 # define INC e->zoom
 # define OFF 1.00 * e->off
 # define YOFF 1.00 * e->off2
