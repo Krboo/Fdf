@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:45:48 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/05 19:54:34 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/06 17:24:28 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void		ft_get_tab(t_map *map)
 	close(fd);
 	fd = open(map->av[1], O_RDONLY);
 	if ((map->tab = (char **)malloc(sizeof(char *) * (map->y + 1))) == NULL)
-		exit (0);
+		exit(0);
 	while (get_next_line(fd, &line))
 	{
 		if (line[0] != '\0')
@@ -55,7 +55,7 @@ t_coord		*ft_new_coord(int x, int y, int z, t_map *map)
 	return (coord);
 }
 
-void		getch(int i, int j, t_map *map, t_coord ***coord)
+void		get(int i, int j, t_map *map, t_coord ***coord)
 {
 	while (++j < map->x)
 	{
@@ -88,7 +88,7 @@ t_coord		***ft_get_coord(t_map *map)
 		if ((coord[i] = (t_coord **)malloc(sizeof(t_coord*) *
 (map->x + 1))) == NULL)
 			return (NULL);
-		getch(i, j, map, coord);
+		get(i, j, map, coord);
 		i++;
 	}
 	map->tmp = NULL;

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mlx_pixel_wput.c                                   :+:      :+:    :+:   */
+/*   mlx_color.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/04/05 19:46:46 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/05 23:34:13 by pmartine         ###   ########.fr       */
+/*   Created: 2016/04/06 18:26:29 by pmartine          #+#    #+#             */
+/*   Updated: 2016/04/06 18:27:25 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-void	mlx_pxl_wputb(t_env *e, int x, int y, unsigned int place)
+void	mlx_pxl(t_env *e, int x, int y, unsigned int place)
 {
 	place = y * (WIDTH * 4);
 	place += x * 4;
@@ -39,7 +39,7 @@ void	mlx_pxl_wputb(t_env *e, int x, int y, unsigned int place)
 	}
 }
 
-void	mlx_pixel_wput(t_env *e, int x, int y)
+void	mlx_color(t_env *e, int x, int y)
 {
 	unsigned int	place;
 
@@ -57,5 +57,5 @@ void	mlx_pixel_wput(t_env *e, int x, int y)
 	e->colorpix->b3 = (e->color3 & 0xFF);
 	
 	if (x > 0 && x < WIDTH)
-		mlx_pxl_wputb(e, x, y, place);
+		mlx_pxl(e, x, y, place);
 }

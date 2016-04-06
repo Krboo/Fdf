@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:24 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/05 21:26:58 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/06 17:38:27 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int		mouse_hook(int button, int x, int y, t_env *c)
 		c->off2 = y;
 		c->zoom -= (c->zoom > 0 ? 1 : 0);
 	}
-		mlx_destroy_image(c->mlx, c->img);
+	mlx_destroy_image(c->mlx, c->img);
 	c->img = mlx_new_image(c->mlx, WIDTH, HEIGHT);
 	c->data = mlx_get_data_addr(c->img, &(c->bpp), &(c->s_line), &(c->endian));
 	expose_hook(c);
@@ -82,6 +82,10 @@ int		key_hook(int keycode, t_env *e)
 		e->zh += 3;
 	if (keycode == 69)
 		e->zh -= 3;
+	if (keycode == 12)
+		e->zoom += 5;
+	if (keycode == 13)
+		e->zoom -= 5;
 	key_hook2(keycode, e);
 	mlx_destroy_image(e->mlx, e->img);
 	e->img = mlx_new_image(e->mlx, WIDTH, HEIGHT);
@@ -100,8 +104,10 @@ void	ft_mlx(t_env *e)
 	e->endian = 1;
 	e->s_line = WIDTH;
 	e->data = mlx_get_data_addr(e->img, &(e->bpp), &(e->s_line), &(e->endian));
+	e->zh -= 3;
 	e->color = mlx_get_color_value(e->mlx, 0x3498db);
-	e->color2 = mlx_get_color_value(e->mlx, 0x00561b);
+	e->color2 = mlx_get_color_value(e->mlx, 0x66001b);
+	e->color3 = mlx_get_color_value(e->mlx, 0x00561b);
 	mlx_hook(e->win, 2, 1L << 2, key_hook, e);
 	mlx_mouse_hook(e->win, mouse_hook, e);
 	mlx_expose_hook(e->win, expose_hook, e);

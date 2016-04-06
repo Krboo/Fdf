@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:53:05 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/05 22:30:16 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/05 23:22:48 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@
 # include <fcntl.h>
 # include "../minilibx_macos/mlx.h"
 # include "../libft/includes/libft.h"
-# define WIDTH 960
-# define HEIGHT 540
-# define XCENTER 480
-# define YCENTER 270
+# define WIDTH 1500
+# define HEIGHT 750
+# define XCENTER 750
+# define YCENTER 375
 # define INC e->zoom
 # define OFF 1.00 * e->off
 # define YOFF 1.00 * e->off2
@@ -77,6 +77,9 @@ typedef struct		s_color
 	unsigned char	r2;
 	unsigned char	g2;
 	unsigned char	b2;
+	unsigned char	r3;
+	unsigned char	g3;
+	unsigned char	b3;
 }					t_color;
 
 typedef struct		s_inc
@@ -90,7 +93,7 @@ typedef struct		s_inc
 	int				z3;
 	int				color;
 	int				color2;
-
+	int				color3;
 }					t_inc;
 
 typedef struct		s_env
@@ -100,6 +103,7 @@ typedef struct		s_env
 	void			*img;
 	unsigned long	color;
 	unsigned long	color2;
+	unsigned long	color3;
 	t_coord			***coord;
 	t_inc			*inc;
 	t_color			*colorpix;

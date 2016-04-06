@@ -6,13 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:57 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/05 19:56:04 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/06 18:39:55 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-void vect_ab(t_box *b, t_env *c)
+void	vect_ab(t_box *b, t_env *c)
 {
 	int dx;
 	int dy;
