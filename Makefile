@@ -6,13 +6,13 @@
 #    By: pmartine <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 19:43:41 by pmartine          #+#    #+#              #
-#    Updated: 2016/04/05 19:44:21 by pmartine         ###   ########.fr        #
+#    Updated: 2016/04/06 18:28:34 by pmartine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 
-SRC = src/coord.c src/hook.c src/mlx_pixel_wput.c src/vect_crux.c src/vect_octant_5_8.c src/draw.c src/main.c src/vect_ab.c src/vect_octant_1_4.c
+SRC = src/coord.c src/hook.c src/mlx_color.c src/vect_crux.c src/vect_octant.c src/draw.c src/main.c src/vect_ab.c src/vect_octant2.c
 
 FLAGS = -Wall -Werror -Wextra
 

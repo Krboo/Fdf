@@ -6,13 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/06 17:35:19 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/06 18:31:40 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/06 19:33:15 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-void octant_5(t_box *b, t_env *c)
+void	octant_5(t_box *b, t_env *c)
 {
 	int dx;
 	int dy;
@@ -36,7 +36,7 @@ void octant_5(t_box *b, t_env *c)
 	}
 }
 
-void octant_6(t_box *b, t_env *c)
+void	octant_6(t_box *b, t_env *c)
 {
 	int dx;
 	int dy;
@@ -60,7 +60,7 @@ void octant_6(t_box *b, t_env *c)
 	}
 }
 
-void octant_7(t_box *b, t_env *c)
+void	octant_7(t_box *b, t_env *c)
 {
 	int dx;
 	int dy;
@@ -84,7 +84,7 @@ void octant_7(t_box *b, t_env *c)
 	}
 }
 
-void octant_8(t_box *b, t_env *c)
+void	octant_8(t_box *b, t_env *c)
 {
 	int dx;
 	int dy;

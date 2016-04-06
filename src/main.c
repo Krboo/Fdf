@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:33 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/06 17:07:00 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/06 19:28:15 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ static void	text(int i)
 		ft_putstr("Usage : ./fdf <mapfile.fdf>\n");
 		exit(0);
 	}
-	ft_putstr("Up / Down / Left / Right : translation + rotation\nR / L Mouse click: center + zoom map\n \
-+/- : increase / decrease Z\nQ / W : bigger zoom\nEchap : quit program");
+	ft_putstr("Up/Down/Left/Right : translation + rotation\n \
+	Mouse click : center map + zoom\n+/- : increase / decrease Z\n \
+	Q / W : bigger zoom / dezoom\nEchap : quit program");
 }
 
 int			main(int ac, char **av)

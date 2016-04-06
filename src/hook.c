@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:24 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/06 17:38:27 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/06 19:30:10 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int		mouse_hook(int button, int x, int y, t_env *c)
 	{
 		c->zoom += 1;
 		c->off = x;
-		c->off2 = y;		
+		c->off2 = y;
 	}
 	if (button == 2)
 	{

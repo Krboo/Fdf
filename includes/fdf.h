@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:53:05 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/05 23:22:48 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/06 18:27:50 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 # include "../libft/includes/libft.h"
 # define WIDTH 1500
 # define HEIGHT 750
-# define XCENTER 750
-# define YCENTER 375
+# define XCENTER (WIDTH / 2)
+# define YCENTER (HEIGHT / 2)
 # define INC e->zoom
 # define OFF 1.00 * e->off
 # define YOFF 1.00 * e->off2
@@ -149,8 +149,8 @@ void				put_ring_arb(t_env *c);
 void				vect(float x, float y, float x2, float y2, t_env *c);
 void				ft_mlx(t_env *e);
 void				draw(t_env *e);
-void				mlx_pixel_wput(t_env *e, int x, int y);
-void				mlx_pxl_wputb(t_env *e, int x, int y, unsigned int place);
+void				mlx_color(t_env *e, int x, int y);
+void				mlx_pxl(t_env *e, int x, int y, unsigned int place);
 int					calc_dist_ab(float x, float y, float x2, float y2);
 int					key_hook(int keycode, t_env *c);
 int					mouse_hook(int button, int x, int y, t_env *c);
