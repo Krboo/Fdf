@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:53:05 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/06 18:27:50 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/11 20:02:37 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,8 @@
 # include <fcntl.h>
 # include "../minilibx_macos/mlx.h"
 # include "../libft/includes/libft.h"
-# define WIDTH 1500
-# define HEIGHT 750
-# define XCENTER (WIDTH / 2)
-# define YCENTER (HEIGHT / 2)
+# include "defines.h"
 # define INC e->zoom
-# define OFF 1.00 * e->off
-# define YOFF 1.00 * e->off2
 # define SX2 e->coord[i + 1][0]->size_x
 # define T e->rot
 # define S e->roty
@@ -34,10 +29,6 @@
 # define Y1 e->inc->y1
 # define X2 e->inc->x2
 # define Y2 e->inc->y2
-# define SIZX e->coord[0][0]->size_x
-# define SIZY e->coord[0][0]->size_y
-# define CT1 0.5
-# define CT2 0.5
 # define XR1(x) (x*(cos(T)))
 # define XR2(x) (x*(cos(T+M_PI/2)))
 # define YR1(y) (y*(sin(T))*(sin(S)))

@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:24 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/06 19:30:10 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/11 20:00:42 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,25 +31,21 @@ int		expose_hook(t_env *e)
 
 void	key_hook2(int keycode, t_env *e)
 {
-	if (keycode == 123)
+	if (keycode == LEFT)
 	{
-		e->rot += (3 * M_PI / 180);
-		e->off -= 10;
+		e->rot += (3 * M_PI / 90);
 	}
-	if (keycode == 124)
+	if (keycode == RIGHT)
 	{
-		e->rot -= (3 * M_PI / 180);
-		e->off += 10;
+		e->rot -= (3 * M_PI / 90);
 	}
-	if (keycode == 126)
+	if (keycode == UP)
 	{
 		e->roty += (3 * M_PI / 90);
-		e->off2 -= 10;
 	}
-	if (keycode == 125)
+	if (keycode == DOWN)
 	{
 		e->roty -= (3 * M_PI / 90);
-		e->off2 += 10;
 	}
 }
 
@@ -76,16 +72,17 @@ int		mouse_hook(int button, int x, int y, t_env *c)
 
 int		key_hook(int keycode, t_env *e)
 {
+	ft_putnbr(keycode);
 	if (keycode == 53)
 		exit(0);
-	if (keycode == 78)
+	if (keycode == Z_MINE)
 		e->zh += 3;
-	if (keycode == 69)
+	if (keycode == Z_PLUS)
 		e->zh -= 3;
-	if (keycode == 12)
-		e->zoom += 5;
-	if (keycode == 13)
-		e->zoom -= 5;
+	if (keycode == ZOOM)
+		e->zoom += 3;
+	if (keycode == DEZOOM)
+		e->zoom -= 3;
 	key_hook2(keycode, e);
 	mlx_destroy_image(e->mlx, e->img);
 	e->img = mlx_new_image(e->mlx, WIDTH, HEIGHT);
@@ -105,7 +102,7 @@ void	ft_mlx(t_env *e)
 	e->s_line = WIDTH;
 	e->data = mlx_get_data_addr(e->img, &(e->bpp), &(e->s_line), &(e->endian));
 	e->zh -= 3;
-	e->color = mlx_get_color_value(e->mlx, 0x3498db);
+	e->color = mlx_get_color_value(e->mlx, 0x0099bb);
 	e->color2 = mlx_get_color_value(e->mlx, 0x66001b);
 	e->color3 = mlx_get_color_value(e->mlx, 0x00561b);
 	mlx_hook(e->win, 2, 1L << 2, key_hook, e);
