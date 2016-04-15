@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:33 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 21:24:12 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 22:38:51 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	display(t_env *e)
 {
 	char	*commands;
 
-	commands = "FLECHES : rotations";
+	commands = "fleches : rotations";
 	mlx_string_put(e->mlx, e->win, 5, 5, 0xFBFBFB, commands);
-	commands = "SOURIS : deplacer la map";
+	commands = "souris : deplacer la map";
 	mlx_string_put(e->mlx, e->win, 5, 25, 0xFBFBFB, commands);
 	commands = "+ / - : zoomer / dezoomer";
 	mlx_string_put(e->mlx, e->win, 5, 45, 0xFBFBFB, commands);
-	commands = "Z / X : incrementer / decrementer Z";
+	commands = "z/x : incrementer / decrementer z";
 	mlx_string_put(e->mlx, e->win, 5, 65, 0xFBFBFB, commands);
 }
 
