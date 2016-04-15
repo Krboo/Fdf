@@ -6,13 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:24 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 17:47:47 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 19:45:49 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-static int		loop_hook(t_env *e)
+static int	loop_hook(t_env *e)
 {
 	mlx_destroy_image(e->mlx, e->img);
 	e->img = mlx_new_image(e->mlx, WIDTH, HEIGHT);
@@ -21,13 +21,13 @@ static int		loop_hook(t_env *e)
 	return (0);
 }
 
-static int		expose_hook(t_env *e)
+static int	expose_hook(t_env *e)
 {
 	draw(e);
 	return (0);
 }
 
-static int		mouse_hook(int button, int x, int y, t_env *c)
+static int	mouse_hook(int button, int x, int y, t_env *c)
 {
 	if (button == 1)
 	{
@@ -40,10 +40,10 @@ static int		mouse_hook(int button, int x, int y, t_env *c)
 		c->off2 = y;
 	}
 	loop_hook(c);
-	return(0);
+	return (0);
 }
 
-static int		key_hook(int keycode, t_env *e)
+static int	key_hook(int keycode, t_env *e)
 {
 	if (keycode == ECHAP)
 		exit(0);
@@ -55,7 +55,7 @@ static int		key_hook(int keycode, t_env *e)
 		e->zoom += 3;
 	if (keycode == DEZOOM)
 		e->zoom -= 3;
-	if (keycode == 	UP)
+	if (keycode == UP)
 		e->rot += (5 * (M_PI / 180));
 	if (keycode == DOWN)
 		e->rot -= (5 * (M_PI / 180));
@@ -64,10 +64,10 @@ static int		key_hook(int keycode, t_env *e)
 	if (keycode == RIGHT)
 		e->roty -= (5 * (M_PI / 90));
 	loop_hook(e);
-	return(0);
+	return (0);
 }
 
-void	ft_mlx(t_env *e)
+void		ft_mlx(t_env *e)
 {
 	e->mlx = mlx_init();
 	e->win = mlx_new_window(e->mlx, WIDTH, HEIGHT, "fdf");

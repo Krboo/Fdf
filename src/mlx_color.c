@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/06 18:26:29 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 17:57:13 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 19:46:34 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void		mlx_pxl(t_env *e, int x, int y, unsigned int place)
 	}
 }
 
-void	mlx_color(t_env *e, int x, int y)
+void			mlx_color(t_env *e, int x, int y)
 {
 	unsigned int	place;
 

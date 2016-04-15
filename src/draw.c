@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:06 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 17:52:21 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 19:47:29 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void		ft_put_pixel(t_env *e, int i, int j)
 	}
 }
 
-void		draw(t_env *e)
+void			draw(t_env *e)
 {
 	int i;
 	int j;

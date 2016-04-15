@@ -6,22 +6,25 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:33 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 18:20:57 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 19:37:36 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-int			main(int ac, char **av)
+void	str_exit(char *str)
+{
+	ft_putendl(str);
+	exit(0);
+}
+
+int		main(int ac, char **av)
 {
 	t_map *map;
 	t_env *e;
 
 	if (ac == 1)
-	{
-		ft_putstr("Usage : ./fdf <mapfile.fdf>\n");
-		exit(0);
-	}
+		str_exit("Usage : ./fdf <mapfile.fdf>");
 	e = (t_env *)malloc(sizeof(t_env));
 	map = (t_map *)malloc(sizeof(t_map));
 	e->off = XCENTER;

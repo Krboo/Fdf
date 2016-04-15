@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:53:05 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 18:19:58 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 19:52:50 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct		s_coord
 	int				z;
 	int				size_x;
 	int				size_y;
-}			t_coord;
+}					t_coord;
 
 typedef struct		s_coor_box
 {
@@ -83,7 +83,7 @@ typedef struct		s_env
 	int				zoom;
 	int				max_x;
 	int				max_y;
-	int					zh;
+	int				zh;
 	int				bpp;
 	int				s_line;
 	int				z;
@@ -101,6 +101,7 @@ typedef struct		s_all
 	int				x;
 }					t_map;
 
+void				str_exit(char *str);
 void				crux(t_box *b, t_env *c);
 void				octant_1(t_box *b, t_env *c);
 void				octant_2(t_box *b, t_env *c);

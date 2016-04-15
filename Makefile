@@ -6,7 +6,7 @@
 #    By: pmartine <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 19:43:41 by pmartine          #+#    #+#              #
-#    Updated: 2016/04/15 17:05:53 by pmartine         ###   ########.fr        #
+#    Updated: 2016/04/15 19:00:19 by pmartine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ FLAGS = -Wall -Werror -Wextra
 $(NAME):
 	make -C libft/ re
 	make -C minilibx_macos/ re
-	@gcc $(CFLAGS) -o $(NAME) $(SRC) -I libft/includes/libft.h \
+	gcc $(CFLAGS) -o $(NAME) $(SRC) -I libft/includes/libft.h \
 	-lmlx -framework OpenGl -framework Appkit libft/libft.a
 	@echo "Program created"
 all: $(NAME)
@@ -34,14 +34,5 @@ fclean: clean
 	@echo "all files removed"
 
 re: fclean all
-
-git: fclean
-	git add *
-	git commit -m "maj"
-	git push
-	@echo "GIT PUSH done"
-
-yo: re
-	./fdf 42.fdf
 
 .PHONY : all clean fclean re
