@@ -6,11 +6,18 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:45:48 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 20:29:37 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 20:54:05 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+
+static void		increase_y(t_map *map)
+{
+	map->y++;
+	if (map->y == 1000000)
+		str_exit("Invalid Map");
+}
 
 static void		ft_get_tab(t_map *map)
 {
@@ -23,7 +30,7 @@ static void		ft_get_tab(t_map *map)
 	if ((fd = open(map->av[1], O_RDONLY)) < 0)
 		str_exit("map cannot be read");
 	while (get_next_line(fd, &line))
-		map->y++;
+		increase_y(map);
 	ft_putstr("up/down/left/right : Rotations\nmouse : Translations\n+/- : Z");
 	ft_putstr("\nz/x : Zoom\nechap : Quit Program\n");
 	close(fd);

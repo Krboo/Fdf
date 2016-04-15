@@ -6,7 +6,7 @@
 #    By: pmartine <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 19:43:41 by pmartine          #+#    #+#              #
-#    Updated: 2016/04/15 19:00:19 by pmartine         ###   ########.fr        #
+#    Updated: 2016/04/15 21:20:41 by pmartine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,5 +34,8 @@ fclean: clean
 	@echo "all files removed"
 
 re: fclean all
+
+42: re
+	./fdf ressources/test/42.fdf
 
 .PHONY : all clean fclean re

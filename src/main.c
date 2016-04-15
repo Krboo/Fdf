@@ -6,11 +6,25 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:33 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 19:37:36 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 21:24:12 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
+
+void	display(t_env *e)
+{
+	char	*commands;
+
+	commands = "FLECHES : rotations";
+	mlx_string_put(e->mlx, e->win, 5, 5, 0xFBFBFB, commands);
+	commands = "SOURIS : deplacer la map";
+	mlx_string_put(e->mlx, e->win, 5, 25, 0xFBFBFB, commands);
+	commands = "+ / - : zoomer / dezoomer";
+	mlx_string_put(e->mlx, e->win, 5, 45, 0xFBFBFB, commands);
+	commands = "Z / X : incrementer / decrementer Z";
+	mlx_string_put(e->mlx, e->win, 5, 65, 0xFBFBFB, commands);
+}
 
 void	str_exit(char *str)
 {

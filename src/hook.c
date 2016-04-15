@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:24 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 19:45:49 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 21:19:08 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@ static int	loop_hook(t_env *e)
 	e->img = mlx_new_image(e->mlx, WIDTH, HEIGHT);
 	e->data = mlx_get_data_addr(e->img, &(e->bpp), &(e->s_line), &(e->endian));
 	draw(e);
+	display(e);
 	return (0);
 }
 
 static int	expose_hook(t_env *e)
 {
 	draw(e);
+	display(e);
 	return (0);
 }
 
