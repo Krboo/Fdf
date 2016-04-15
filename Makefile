@@ -6,7 +6,7 @@
 #    By: pmartine <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/05 19:43:41 by pmartine          #+#    #+#              #
-#    Updated: 2016/04/06 18:28:34 by pmartine         ###   ########.fr        #
+#    Updated: 2016/04/15 17:05:53 by pmartine         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ $(NAME):
 	make -C libft/ re
 	make -C minilibx_macos/ re
 	@gcc $(CFLAGS) -o $(NAME) $(SRC) -I libft/includes/libft.h \
-		-lmlx -framework OpenGl -framework Appkit libft/libft.a
+	-lmlx -framework OpenGl -framework Appkit libft/libft.a
 	@echo "Program created"
 all: $(NAME)
 

@@ -6,13 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:47:15 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/06 18:29:38 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 18:01:55 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-void	crux_x(int x1, int y1, int x2, t_env *c)
+static void	crux_x(int x1, int y1, int x2, t_env *c)
 {
 	int dx;
 
@@ -35,7 +35,7 @@ void	crux_x(int x1, int y1, int x2, t_env *c)
 	}
 }
 
-void	crux_y(int x1, int y1, int y2, t_env *c)
+static void	crux_y(int x1, int y1, int y2, t_env *c)
 {
 	int dy;
 

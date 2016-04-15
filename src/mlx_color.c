@@ -6,13 +6,13 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/06 18:26:29 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/06 19:29:24 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/15 17:57:13 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fdf.h"
 
-void	mlx_pxl(t_env *e, int x, int y, unsigned int place)
+static void		mlx_pxl(t_env *e, int x, int y, unsigned int place)
 {
 	place = y * (WIDTH * 4);
 	place += x * 4;
@@ -55,7 +55,6 @@ void	mlx_color(t_env *e, int x, int y)
 	e->colorpix->r3 = (e->color3 & 0xFF0000) >> 16;
 	e->colorpix->g3 = (e->color3 & 0xFF00) >> 8;
 	e->colorpix->b3 = (e->color3 & 0xFF);
-	
-	if (x > 0 && x < WIDTH)
+	if (x >= 0 && x <= WIDTH && y >= 0 && y <= HEIGHT)
 		mlx_pxl(e, x, y, place);
 }
