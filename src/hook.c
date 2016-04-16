@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:24 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 21:19:08 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/16 19:33:46 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ static int	loop_hook(t_env *e)
 	return (0);
 }
 
-static int	expose_hook(t_env *e)
+static void	reset(t_env *c)
 {
-	draw(e);
-	display(e);
-	return (0);
+	c->zoom = 42;
+	c->rot = 90;
+	c->roty = -88;
+	c->zh = -2;
 }
 
 static int	mouse_hook(int button, int x, int y, t_env *c)
@@ -49,6 +50,8 @@ static int	key_hook(int keycode, t_env *e)
 {
 	if (keycode == ECHAP)
 		exit(0);
+	if (keycode == RESET)
+		reset(e);
 	if (keycode == Z_PLUS)
 		e->zh += 1.5;
 	if (keycode == Z_MINE)
@@ -56,7 +59,7 @@ static int	key_hook(int keycode, t_env *e)
 	if (keycode == ZOOM)
 		e->zoom += 3;
 	if (keycode == DEZOOM)
-		e->zoom -= 3;
+		e->zoom -= (e->zoom >= 3) ? 3 : 0;
 	if (keycode == UP)
 		e->rot += (5 * (M_PI / 180));
 	if (keycode == DOWN)

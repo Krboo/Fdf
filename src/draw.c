@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:06 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 21:13:13 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/16 19:34:22 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,11 @@ void			draw(t_env *e)
 		i++;
 	}
 	mlx_put_image_to_window(e->mlx, e->win, e->img, 0, 0);
+}
+
+int				expose_hook(t_env *e)
+{
+	draw(e);
+	display(e);
+	return (0);
 }

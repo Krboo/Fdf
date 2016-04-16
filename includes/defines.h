@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/15 18:19:33 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 19:56:15 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/16 19:19:54 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,10 @@
 # define RIGHT 124
 # define ZOOM 69
 # define DEZOOM 78
-# define Z_MINE 6
-# define Z_PLUS 7
+# define Z_MINE 116
+# define Z_PLUS 121
 # define ECHAP 53
+# define RESET 71
 
 # define WIDTH 1500
 # define HEIGHT 750

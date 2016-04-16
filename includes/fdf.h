@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:53:05 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 21:15:35 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/16 19:32:27 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,4 +117,6 @@ void				ft_mlx(t_env *e);
 void				draw(t_env *e);
 t_coord				***ft_get_coord(t_map *map);
 void				display(t_env *e);
+void				free_all(t_env *e, t_map *map);
+int					expose_hook(t_env *e);
 #endif

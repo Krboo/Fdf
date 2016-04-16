@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:46:33 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/15 22:38:51 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/16 19:23:40 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,21 @@ void	display(t_env *e)
 	commands = "fleches : rotations";
 	mlx_string_put(e->mlx, e->win, 5, 5, 0xFBFBFB, commands);
 	commands = "souris : deplacer la map";
-	mlx_string_put(e->mlx, e->win, 5, 25, 0xFBFBFB, commands);
-	commands = "+ / - : zoomer / dezoomer";
-	mlx_string_put(e->mlx, e->win, 5, 45, 0xFBFBFB, commands);
-	commands = "z/x : incrementer / decrementer z";
+	mlx_string_put(e->mlx, e->win, 5, 20, 0xFBFBFB, commands);
+	commands = "+/- : zoomer / dezoomer";
+	mlx_string_put(e->mlx, e->win, 5, 35, 0xFBFBFB, commands);
+	commands = "pageup/pagedown : +/- Z";
+	mlx_string_put(e->mlx, e->win, 5, 50, 0xFBFBFB, commands);
+	commands = "clear : reset";
 	mlx_string_put(e->mlx, e->win, 5, 65, 0xFBFBFB, commands);
+	commands = "echap : quitter";
+	mlx_string_put(e->mlx, e->win, 5, 80, 0xFBFBFB, commands);
+}
+
+void	free_all(t_env *e, t_map *map)
+{
+	free(map);
+	free(e);
 }
 
 void	str_exit(char *str)
@@ -50,7 +60,6 @@ int		main(int ac, char **av)
 	map->av = av;
 	e->coord = ft_get_coord(map);
 	ft_mlx(e);
-	free(e);
-	free(map);
+	free_all(e, map);
 	return (0);
 }
