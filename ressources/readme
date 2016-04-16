@@ -1,8 +1,0 @@
-Key funct -> recuperer mlx + win + autres avec le void *param de my_key_funct
-
-if (ac != 2)
-	ft_putendl("Usage : ./fdf <filename> [ case_size z_size ]");
-
-changer couleurs en fonction coordoonees
-
-
