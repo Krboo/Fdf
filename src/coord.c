@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:45:48 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/16 19:29:47 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/17 18:52:49 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ static void		ft_get_tab(t_map *map)
 		str_exit("map cannot be read");
 	while (get_next_line(fd, &line))
 		increase_y(map);
-	ft_putstr("up/down/left/right : Rotations\nmouse : Translations\n+/- : Z");
-	ft_putstr("\nz/x : Zoom\nechap : Quit Program\n");
 	close(fd);
 	fd = open(map->av[1], O_RDONLY);
 	if ((map->tab = (char **)malloc(sizeof(char *) * (map->y + 1))) == NULL)
