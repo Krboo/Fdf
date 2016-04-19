@@ -6,7 +6,7 @@
 /*   By: pmartine <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/05 19:45:48 by pmartine          #+#    #+#             */
-/*   Updated: 2016/04/17 18:52:49 by pmartine         ###   ########.fr       */
+/*   Updated: 2016/04/19 20:25:09 by pmartine         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void		increase_y(t_map *map)
 {
 	map->y++;
 	if (map->y == 1000000)
-		str_exit("Invalid Map");
+		str_exit("No data found.");
 }
 
 static void		ft_get_tab(t_map *map)
@@ -28,7 +28,7 @@ static void		ft_get_tab(t_map *map)
 	map->y = 0;
 	i = 0;
 	if ((fd = open(map->av[1], O_RDONLY)) < 0)
-		str_exit("map cannot be read");
+		str_exit("File cannot be read");
 	while (get_next_line(fd, &line))
 		increase_y(map);
 	close(fd);
